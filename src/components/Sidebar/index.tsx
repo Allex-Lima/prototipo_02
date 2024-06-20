@@ -15,6 +15,7 @@ export default function HeadlessDemo() {
           justifyContent: "space-between",
           padding: "0 1rem",
           backgroundColor: "#24A2AD",
+          borderRadius: 0
         }}
         start={() => (
           <Button

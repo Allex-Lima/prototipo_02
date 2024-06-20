@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer"
 import Graphic from "../components/graphic/Graphic"
 import NewSideBar from '../components/Sidebar/index'
 
@@ -6,6 +7,7 @@ const PageGraphic = () => {
     <div>
       <NewSideBar />
       <Graphic />
+      <Footer />
     </div>
   )
 }

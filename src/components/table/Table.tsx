@@ -47,13 +47,13 @@ const PageTable = () => {
 
   return (
     <div className="card">
-            <h2>Dados dos Produtos</h2>
-            <DataTable value={products} paginator rows={5} rowsPerPageOptions={[5, 10, 25, 50]}         tableStyle={{ minWidth: '70rem' }}
+            <h2 className='text-center'>Dados</h2>
+            <DataTable value={products} paginator rows={20} rowsPerPageOptions={[5, 10, 25, 50]}         tableStyle={{ minWidth: '70rem' }}
             style={{ borderCollapse: 'collapse'}}
             className="custom-table"
             >
                 {columns.map((col) => (
-                    <Column key={col.field} field={col.field} header={col.header} bodyStyle={{ border: '1px solid blue' }} headerStyle={{ border: '1px solid blue' }}></Column>
+                    <Column key={col.field} field={col.field} header={col.header} ></Column>
                 ))}
             </DataTable>
         </div>

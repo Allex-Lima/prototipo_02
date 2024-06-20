@@ -1,7 +1,5 @@
 .custom-table .p-datatable-tbody > tr:nth-child(odd) {
-    background-color: #c2c1c1; /* Cor para linhas ímpares */
     font-weight: bold;
-    color: red;
 }
 
 .custom-table .p-datatable-tbody > tr:nth-child(even) {

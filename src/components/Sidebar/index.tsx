@@ -26,15 +26,6 @@ export default function HeadlessDemo() {
             onClick={() => setVisibleLeft(true)}
           />
         )}
-        end={() => (
-          <Button
-            style={{
-              backgroundColor: "#24A2AD",
-              height: "3rem",
-            }}
-            icon="pi pi-search"
-          />
-        )}
       />
 
       <Sidebar

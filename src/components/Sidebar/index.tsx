@@ -14,31 +14,27 @@ export default function HeadlessDemo() {
           display: "flex",
           justifyContent: "space-between",
           padding: "0 1rem",
-          backgroundColor: "#24A2AD",
         }}
         start={() => (
           <Button
             style={{
-              backgroundColor: "#24A2AD",
+              justifyContent: "center",
+              backgroundColor: "#ffffff",
+              borderColor: "#ffffff",
+              width: "3rem",
               height: "3rem",
             }}
-            icon="pi pi-bars"
             onClick={() => setVisibleLeft(true)}
-          />
-        )}
-        end={() => (
-          <Button
-            style={{
-              backgroundColor: "#24A2AD",
-              height: "3rem",
-            }}
-            icon="pi pi-search"
-          />
+          >
+            <i
+              className="pi pi-align-justify"
+              style={{ fontSize: "1.1rem", color: "gray" }}
+            ></i>
+          </Button>
         )}
       />
 
       <Sidebar
-       
         visible={visibleLeft}
         position="left"
         onHide={() => setVisibleLeft(false)}

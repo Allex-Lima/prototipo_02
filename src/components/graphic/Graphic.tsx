@@ -8,16 +8,16 @@ export default function Graphic() {
 
     useEffect(() => {
         const data = {
-            labels: ['Q1', 'Q2', 'Q3', 'Q4'],
+            labels: ['JAN', 'FEV', 'MAR', 'ABR'],
             datasets: [
                 {
-                    label: 'Sales',
+                    label: 'Dados Mensais',
                     data: [540, 325, 702, 620],
                     backgroundColor: [
-                        'rgba(255, 159, 64, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(153, 102, 255, 0.2)'
+                        'rgba(143, 99, 71, 0.7)',
+                        'rgba(143, 99, 178, 0.7)',
+                        'rgba(60, 179, 113, 0.7)',
+                        'rgba(255, 165, 0, 0.7)'
                       ],
                       borderColor: [
                         'rgb(255, 159, 64)',
@@ -42,8 +42,10 @@ export default function Graphic() {
     }, []);
 
     return (
-        <div className="card">
-            <Chart type="bar" data={chartData} options={chartOptions} />
+        <div className="surface-50	flex justify-content-center align-items-center" style={{ height: '100vh' }} >
+            <Chart type="bar" data={chartData} options={chartOptions}  
+            className="w-8" 
+            />
         </div>
     )
 }

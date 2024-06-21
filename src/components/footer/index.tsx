@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <div className="w-full  absolute bottom-0" >
+    <div className="w-full absolute bottom-0" >
       <footer
         className="flex p-d-flex flex-column  justify-content-center align-items-center h-4rem"
         style={{ background: "#24A2AD" }}

@@ -31,7 +31,8 @@ export function Graphic() {
   }, []);
 
   return (
-    <div className="surface-50	flex justify-content-center align-items-center mb-2">
+    <div className="flex flex-column justify-content-center align-items-center mb-2">
+      <h1 className="">Gráfico</h1>
       <Chart
         className="w-5"
         type="bar"

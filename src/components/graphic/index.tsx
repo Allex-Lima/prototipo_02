@@ -1,30 +1,27 @@
 import { useState, useEffect } from "react";
 import { Chart } from "primereact/chart";
 
-export default function Graphic() {
+export function Graphic() {
   const [chartData, setChartData] = useState({});
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     const data = {
-      labels: ["JAN", "FEV", "MAR", "ABR"],
+      labels: ["Q1", "Q2", "Q3", "Q4"],
       datasets: [
         {
-          label: "Valor Bruto",
-          data: [540, 330, 6000, 7000],
-          backgroundColor: "",
-
+          label: "Sales",
+          data: [10, 50, 500, 1720],
+          backgroundColor: ["rgb(75, 192, 192)"],
+          borderColor: ["rgb(75, 192, 192)"],
           borderWidth: 1,
         },
-        
       ],
     };
     const options = {
-      plugins: {
-        legend: {
-          labels: {
-            usePointStyle: true,
-          },
+      scales: {
+        y: {
+          beginAtZero: true,
         },
       },
     };
@@ -34,15 +31,12 @@ export default function Graphic() {
   }, []);
 
   return (
-    <div
-      className="surface-50	flex justify-content-center align-items-center"
-      style={{ height: "100vh" }}
-    >
+    <div className="surface-50	flex justify-content-center align-items-center mb-2">
       <Chart
-        type="Doughnut"
+        className="w-5"
+        type="bar"
         data={chartData}
         options={chartOptions}
-        className="w-8"
       />
     </div>
   );

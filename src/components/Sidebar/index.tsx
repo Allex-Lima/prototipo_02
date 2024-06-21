@@ -3,7 +3,7 @@ import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { Menubar } from "primereact/menubar";
 
-export default function HeadlessDemo() {
+export function SidBar() {
   const [visibleLeft, setVisibleLeft] = useState(false);
 
   return (
@@ -15,7 +15,7 @@ export default function HeadlessDemo() {
           justifyContent: "space-between",
           padding: "0 1rem",
           backgroundColor: "#24A2AD",
-          borderRadius: 0
+          borderRadius: 0,
         }}
         start={() => (
           <Button
@@ -30,7 +30,6 @@ export default function HeadlessDemo() {
       />
 
       <Sidebar
-       
         visible={visibleLeft}
         position="left"
         onHide={() => setVisibleLeft(false)}

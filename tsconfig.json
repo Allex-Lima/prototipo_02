@@ -20,6 +20,19 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": [
+    "src/**/*",
+    "types/**/*",
+    "scripts/**/*",
+    "test/**/*",
+    "jest.config.js",
+    "tsconfig.node.json",
+    "tsconfig.web.json",
+    "tsconfig.test.json",
+    "tsconfig.build.json",
+    "tsconfig.build.web.json",
+    "tsconfig.build.node.json",
+    "tsconfig.build.test.json"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

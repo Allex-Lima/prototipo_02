@@ -1,4 +1,3 @@
-import { Panel } from "primereact/panel";
 import { Footer } from "../../components/footer";
 import { Graphic } from "../../components/graphic";
 import { SidBar } from "../../components/Sidebar";
@@ -13,7 +12,7 @@ export function PageGraphic() {
           <Graphic />
           <div className="card">
             <Table />
-          </div >
+          </div>
         </div>
         <div className="col-6">
           <Graphic />

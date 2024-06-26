@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { Menubar } from "primereact/menubar";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/conmac.jpg";
 
 export function SidBar() {
   const [visibleLeft, setVisibleLeft] = useState(false);
@@ -39,72 +41,34 @@ export function SidBar() {
             <li>
               <ul className="list-none p-0 m-0 overflow-hidden">
                 <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-home mr-2"></i>
+                  <img src={Logo} alt="logo" className="w-5 mb-5" />
+                </li>
+                <li>
+                  <Link
+                    to="/grafico"
+                    className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline"
+                  >
+                    <i className="pi pi-chart-bar mr-2"></i>
                     <span className="font-medium">Dashboard</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-bookmark mr-2"></i>
-                    <span className="font-medium">Bookmarks</span>
-                  </a>
+                  <Link
+                    to="/produtos"
+                    className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline"
+                  >
+                    <i className="pi pi-table mr-2"></i>
+                    <span className="font-medium">Tabela</span>
+                  </Link>
                 </li>
                 <li>
-                  <ul className="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
-                    <li>
-                      <ul className="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
-                        <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-table mr-2"></i>
-                            <span className="font-medium">View</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                            <i className="pi pi-search mr-2"></i>
-                            <span className="font-medium">Search</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                        <i className="pi pi-chart-line mr-2"></i>
-                        <span className="font-medium">Expenses</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-users mr-2"></i>
-                    <span className="font-medium">Team</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-comments mr-2"></i>
-                    <span className="font-medium">Messages</span>
-                    <span
-                      className="inline-flex align-items-center justify-content-center ml-auto bg-blue-500 text-0 border-circle"
-                      style={{ minWidth: "1.5rem", height: "1.5rem" }}
-                    >
-                      3
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-calendar mr-2"></i>
-                    <span className="font-medium">Calendar</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
-                    <i className="pi pi-cog mr-2"></i>
-                    <span className="font-medium">Settings</span>
-                  </a>
+                  <Link
+                    to="/report"
+                    className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full no-underline"
+                  >
+                    <i className="pi pi-file-pdf mr-2"></i>
+                    <span className="font-medium">Relatório</span>
+                  </Link>
                 </li>
               </ul>
             </li>

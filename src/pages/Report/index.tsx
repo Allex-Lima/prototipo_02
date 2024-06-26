@@ -1,28 +1,27 @@
+import { Card } from "primereact/card";
+import { SidBar } from "../../components/Sidebar";
+import { Footer } from "../../components/footer";
 import { Graphic } from "../../components/graphic";
 import { Table } from "../../components/table/Table";
-import { Panel } from "primereact/panel";
 
 export function PageReport() {
   return (
-    <>
+    <div className="bg-white-alpha-80">
+      <SidBar />
       <h2 className="text-center">Relatório</h2>
-      <div
-        className="p-grid p-justify-center p-align-center"
-        style={{ padding: "2rem" }}
-      >
-        <div className="p-col-12 p-md-10">
-          <Panel header="Dados Mensais">
-            <div className="p-grid">
-              <div className="p-col-12 p-md-6">
-                <Graphic />
-              </div>
-              <div className="p-col-12 p-md-6">
-                <Table />
-              </div>
-            </div>
-          </Panel>
+      <div className="flex ">
+        <div className="col-6 m-0">
+          <Card className="w-full h-full">
+            <Graphic />
+          </Card>
+        </div>
+        <div className="col-6">
+          <Card className="w-full h-full p-2">
+            <Table />
+          </Card>
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }

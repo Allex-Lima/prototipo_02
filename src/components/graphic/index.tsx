@@ -31,10 +31,10 @@ export function Graphic() {
   }, []);
 
   return (
-    <div className="flex flex-column justify-content-center align-items-center mb-2">
-      <h1 className="">Gráfico</h1>
+    <div className="flex flex-column justify-content-center align-items-center">
+      <h3 className="text">Gráfico</h3>
       <Chart
-        className="w-5"
+        className="w-full"
         type="bar"
         data={chartData}
         options={chartOptions}

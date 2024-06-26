@@ -12,7 +12,7 @@ export default function Graphic() {
         {
           label: "Valor Bruto",
           data: [540, 330, 6000, 7000],
-          backgroundColor: "",
+          backgroundColor: "rgba(0, 0, 255)",
 
           borderWidth: 1,
         },
@@ -39,7 +39,7 @@ export default function Graphic() {
       style={{ height: "100vh" }}
     >
       <Chart
-        type="Doughnut"
+        type="bar"
         data={chartData}
         options={chartOptions}
         className="w-8"

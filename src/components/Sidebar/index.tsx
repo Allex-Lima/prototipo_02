@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Sidebar } from "primereact/sidebar";
 import { Button } from "primereact/button";
 import { Menubar } from "primereact/menubar";
+import { Link } from 'react-router-dom';
 
 export default function HeadlessDemo() {
   const [visibleLeft, setVisibleLeft] = useState(false);
@@ -48,7 +49,25 @@ export default function HeadlessDemo() {
                 <li>
                   <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
                     <i className="pi pi-bookmark mr-2"></i>
-                    <span className="font-medium">Bookmarks</span>
+                    <span className="font-medium">
+                      <Link to="/produtos" className="no-underline">Produtos</Link>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                    <i className="pi pi-bookmark mr-2"></i>
+                    <span className="font-medium">
+                      <Link to="/grafico" className="no-underline">Gráfico</Link>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a className="p-ripple flex align-items-center cursor-pointer p-3 border-round text-700 hover:surface-100 transition-duration-150 transition-colors w-full">
+                    <i className="pi pi-bookmark mr-2"></i>
+                    <span className="font-medium">
+                      <Link to="/report" className="no-underline">Relatório</Link>
+                    </span>
                   </a>
                 </li>
                 <li>
